@@ -24,7 +24,7 @@ Tania Rascia が Gatsby ブログで書いたように[独自のコメントシ�
 - 公式の[React サポート](https://github.com/disqus/disqus-react)を提供します。
 - [寛大な無料枠](https://disqus.com/pricing)を提供します。
 - [最も広く使用されているサービス](https://www.datanyze.com/market-share/comment-systems/disqus-market-share)のようです。
-- コメントが簡単です。 Disqus には大規模なユーザー基盤があり、新規ユーザーに慣れさせるのが非常に早いです。Google、Facebook、Twitter のアカウントを登録することができ、これらのチャンネルで書いたコメントをシームレスに連携できます。
+- コメントが簡単です。 Disqus には大規模なユーザー基盤があり、新規ユーザーに慣れさせるのが非常に早いです。Google、Facebook、Twitter のアカウントを登録することができ、これらのチャンネルを介して書いたコメントをシームレスに連携できます。
 - The Disqus UI has a distinct but unobtrusive look that many users will recognize and trust.
 - All Disqus components are lazy-loaded, meaning they won't negatively impact the load time of your posts.
 
