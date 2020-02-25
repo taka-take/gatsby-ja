@@ -1,30 +1,30 @@
 ---
-title: Adding Comments
+title: コメントの追加
 ---
 
-If you're using Gatsby to run a blog and you've started adding some content to it, the next thing to think about is how to increase engagement among your visitors. A great way to do that is to allow them to ask questions and express their views on what you've written. This will make your blog seem much more lively to anyone visiting it.
+Gatsby でブログを動かしていて、いくつかのコンテンツを追加した場合、次に考えるのは訪問者のエンゲージメントを高めることです。それを実現する素晴らしい方法は、あなたの記事に対して訪問者が質問したり、意見したりできるようにすることです。これにより、あなたのブログは訪問者にとってより活気のあるものになります。
 
-There are many options out there for adding comment functionality, several of them specifically targeted at static sites. While this list is by no means exhaustive, it does serve as a good starting point to illustrate what's available:
+コメントを追加する機能にはたくさんのオプションがありますが、その中のいくつかは特に静的サイトを対象にしています。このリストは網羅的ではありませんが、何が利用可能なのかを説明する出発点として役に立ちます。
 
 - [Disqus](https://disqus.com)
 - [Commento](https://commento.io)
 - [Facebook Comments](https://www.npmjs.com/package/react-facebook)
 - [Staticman](https://staticman.net)
-- [JustComments](https://just-comments.com) \([official plugin for Gatsby](https://www.gatsbyjs.org/packages/gatsby-plugin-just-comments/)\)
+- [JustComments](https://just-comments.com) \([Gatsby の公式プラグイン](https://www.gatsbyjs.org/packages/gatsby-plugin-just-comments/)\)
 - [TalkYard](https://www.talkyard.io)
 - [Gitalk](https://gitalk.github.io)
 
-You can also [roll your own comment system](/blog/2019-08-27-roll-your-own-comment-system/), as Tania Rascia wrote on the Gatsby blog.
+Tania Rascia が Gatsby ブログで書いたように[独自のコメントシステムを展開する](/blog/2019-08-27-roll-your-own-comment-system/)こともできます。
 
-## Using Disqus for comments
+## コメントに Disqus を使用する
 
-In this guide, you'll learn how to implement Disqus on your blog as it has a number of nice features.
+このガイドでは、ブログに Disqus を実装する方法を学びます。Disqus には多くの優れた機能があるためです。
 
 - It is low maintenance, meaning [moderating your comments and maintaining your forum](https://help.disqus.com/moderation/moderating-101) less hassle.
-- It provides official [React support](https://github.com/disqus/disqus-react).
-- It offers a [generous free tier](https://disqus.com/pricing).
-- It [seems to be by far the most widely used service](https://www.datanyze.com/market-share/comment-systems/disqus-market-share).
-- It’s easier to comment: Disqus has a large existing user base and the onboarding experience for new users is fast. You can register with your Google, Facebook or Twitter account and users can more seamlessly share the comments they write through those channels.
+- 公式の[React サポート](https://github.com/disqus/disqus-react)を提供します。
+- [寛大な無料枠](https://disqus.com/pricing)を提供します。
+- [最も広く使用されているサービス](https://www.datanyze.com/market-share/comment-systems/disqus-market-share)のようです。
+- コメントが簡単です。 Disqus には大規模なユーザー基盤があり、新規ユーザーに慣れさせるのが非常に早いです。Google、Facebook、Twitter のアカウントを登録することができ、これらのチャンネルで書いたコメントをシームレスに連携できます。
 - The Disqus UI has a distinct but unobtrusive look that many users will recognize and trust.
 - All Disqus components are lazy-loaded, meaning they won't negatively impact the load time of your posts.
 
