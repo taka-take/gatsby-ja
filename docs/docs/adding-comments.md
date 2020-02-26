@@ -23,8 +23,8 @@ Tania Rascia が Gatsby ブログで書いたように[独自のコメントシ�
 - It is low maintenance, meaning [moderating your comments and maintaining your forum](https://help.disqus.com/moderation/moderating-101) less hassle.
 - 公式の[React サポート](https://github.com/disqus/disqus-react)を提供します。
 - [寛大な無料枠](https://disqus.com/pricing)を提供します。
-- [最も広く使用されているサービス](https://www.datanyze.com/market-share/comment-systems/disqus-market-share)のようです。
-- コメントが簡単です。 Disqus には大規模なユーザー基盤があり、新規ユーザーに慣れさせるのが非常に早いです。Google、Facebook、Twitter のアカウントを登録することができ、これらのチャンネルを介して書いたコメントをシームレスに連携できます。
+- [もっとも広く使用されているサービス](https://www.datanyze.com/market-share/comment-systems/disqus-market-share)のようです。
+- コメントが簡単です。 Disqus には大規模なユーザー基盤があり、新規ユーザーに慣れさせるのが非常に早いです。Google、Facebook、Twitter のアカウントを登録でき、これらのチャンネルを介して書いたコメントをシームレスに連携できます。
 - Disqus のユーザーインターフェースは多くのユーザーが認識できる落ち着いた外観をしています。
 - すべての Disqus コンポーネントは遅延読み込みされるので、投稿の読み込みに時間に悪影響を与えません。
 
