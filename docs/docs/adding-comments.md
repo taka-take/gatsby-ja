@@ -25,8 +25,8 @@ Tania Rascia が Gatsby ブログで書いたように[独自のコメントシ�
 - [寛大な無料枠](https://disqus.com/pricing)を提供します。
 - [最も広く使用されているサービス](https://www.datanyze.com/market-share/comment-systems/disqus-market-share)のようです。
 - コメントが簡単です。 Disqus には大規模なユーザー基盤があり、新規ユーザーに慣れさせるのが非常に早いです。Google、Facebook、Twitter のアカウントを登録することができ、これらのチャンネルを介して書いたコメントをシームレスに連携できます。
-- The Disqus UI has a distinct but unobtrusive look that many users will recognize and trust.
-- All Disqus components are lazy-loaded, meaning they won't negatively impact the load time of your posts.
+- Disqus のユーザーインターフェースは多くのユーザーが認識できる落ち着いた外観をしています。
+- すべての Disqus コンポーネントは遅延読み込みされるので、投稿の読み込みに時間に悪影響を与えません。
 
 Bear in mind, however, that choosing Disqus also incurs a tradeoff. Your site is no longer entirely static but depends on an external platform to deliver your comments through embedded `iframe`s on the fly. Moreover, you should consider the privacy implications of letting a third party store your visitors' comments and potentially track their browsing behavior. You may consult the [Disqus privacy policy](https://help.disqus.com/terms-and-policies/disqus-privacy-policy), the [privacy FAQs](https://help.disqus.com/terms-and-policies/privacy-faq) (specifically the last question on GDPR compliance) and inform your users [how to edit their data sharing settings](https://help.disqus.com/terms-and-policies/how-to-edit-your-data-sharing-settings).
 
