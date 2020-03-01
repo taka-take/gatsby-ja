@@ -74,7 +74,7 @@ const disqusConfig = {
 }
 ```
 
-Where `identifier` must be a string or number that uniquely identifies the post. It could be the post's スラッグ、 title or some ID. Finally, add `DiscussionEmbed` to the JSX of your post template.
+`identifier`は投稿を一意に識別する文字列か数値である必要があります。それは投稿のスラッグ、タイトル、または何らかの ID かも知れません。最後に、`DiscussionEmbed`コンポーネントを投稿テンプレートの JSX に追加します。
 
 ```jsx:title=src/templates/post.js
 return (
