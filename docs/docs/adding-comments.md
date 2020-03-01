@@ -20,7 +20,7 @@ Tania Rascia が Gatsby ブログで書いたように[独自のコメントシ�
 
 このガイドでは、ブログに Disqus を実装する方法を学びます。Disqus には多くの優れた機能があるためです。
 
-- It is low maintenance, meaning [moderating your comments and maintaining your forum](https://help.disqus.com/moderation/moderating-101) less hassle.
+- [コメントの管理とフォーラムの維持](https://help.disqus.com/moderation/moderating-101)に手間がかかりません。
 - 公式の[React サポート](https://github.com/disqus/disqus-react)を提供します。
 - [寛大な無料枠](https://disqus.com/pricing)を提供します。
 - [もっとも広く使用されているサービス](https://www.datanyze.com/market-share/comment-systems/disqus-market-share)のようです。
