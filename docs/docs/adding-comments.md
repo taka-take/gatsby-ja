@@ -28,24 +28,24 @@ Tania Rascia が Gatsby ブログで書いたように[独自のコメントシ�
 - Disqus のユーザーインターフェースは多くのユーザーが認識できる落ち着いた見た目をしています。
 - すべての Disqus コンポーネントは遅延読み込みされるので、投稿の読み込みに時間に悪影響を与えません。
 
-ただし、Disqus を選択することでトレードオフが発生することを留意しておいてください。もはや、完全な静的サイトではなくなり、埋め込み`iframe`を介して即座にコメントを配信するために外部プラットフォームに依存しています。さらに、第三者が訪問者のコメントを保存し、潜在的に閲覧行動を追跡することへのプライバシーの影響を考慮する必要があります。[Disqus のプライバシーポリシー](https://help.disqus.com/terms-and-policies/disqus-privacy-policy)、[プライバシーに関する FAQ](https://help.disqus.com/terms-and-policies/privacy-faq) (特に GDPR コンプライアンスに関する最後の質問)を参照して、ユーザーに[データの共有設定を編集する方法](https://help.disqus.com/terms-and-policies/how-to-edit-your-data-sharing-settings)を通知できます。
+ただし、Disqus を選択することでトレードオフが発生することを留意しておいてください。もはや、完全な静的サイトではなくなり、埋め込まれた`iframe`を介して即座にコメントを配信するために、外部のプラットフォームに依存しています。さらに、第三者が訪問者のコメントを保存し、潜在的に閲覧行動を追跡することへのプライバシーの影響を考慮する必要があります。[Disqus のプライバシーポリシー](https://help.disqus.com/terms-and-policies/disqus-privacy-policy)、[プライバシーに関する FAQ](https://help.disqus.com/terms-and-policies/privacy-faq) (特に GDPR コンプライアンスに関する最後の質問)を参照して、ユーザーに[データの共有設定を編集する方法](https://help.disqus.com/terms-and-policies/how-to-edit-your-data-sharing-settings)を通知できます。
 
 これらの懸念が Disqus の利点を上回る場合、上に記載した他の選択肢を調べてみてください。このガイドを他のサービスのセットアップ手順で拡張するためのプルリクエストを歓迎します。
 
-## Implementing Disqus
+## Disqus の実装
 
-![Disqus logo](./images/disqus-logo.svg)
+![Disqus のロゴ](./images/disqus-logo.svg)
 
-Here are the steps for adding Disqus comments to your own blog:
+自身のブログに Disqus コメントを追加する手順は次の通りです。
 
-1. [Sign-up to Disqus](https://disqus.com/profile/signup). During the process you'll have to choose a shortname for your site. This is how Disqus will identify comments coming from your site. Copy that for later.
-2. Install the Disqus React package
+1. [Disqus にサインアップ](https://disqus.com/profile/signup)します。サインアップ処理の間にサイトの短縮名を選択する必要があります。これは Disqus がサイトからのコメントを識別するのに使われます。後ほどコピーします。
+2. Disqus の React パッケージをインストールします。
 
 ```shell
 npm install disqus-react
 ```
 
-3. Add the shortname from step 1 as something like `GATSBY_DISQUS_NAME` to your `.env` and `.env.example` files so that people forking your repo will know that they need to supply this value to get comments to work. (You need to prefix the environment variable with `GATSBY_` in order to [make it available to client-side code](https://www.gatsbyjs.org/docs/environment-variables/#client-side-javascript).)
+3. ステップ 1 で選択した短縮名（ここでは仮に`GATSBY_DISQUS_NAME`）を`.env` ファイルと`.env.example`ファイルに追加して、リポジトリをフォークしている人がコメントを機能させるためには、この値が必要であることを認識できるようにします。([クライアント側のコードで環境変数を使用可能にするためには](https://www.gatsbyjs.org/docs/environment-variables/#client-side-javascript)、環境変数の先頭に`GATSBY_`を付ける必要があります。)
 
 ```text:title=.env.example
 # enables Disqus comments for blog posts
@@ -56,7 +56,7 @@ GATSBY_DISQUS_NAME=insertValue
 GATSBY_DISQUS_NAME=yourSiteShortname
 ```
 
-4. In your blog post template (usually `src/templates/post.js`) import the `DiscussionEmbed` component.
+4. ブログ投稿テンプレート(通常は`src/templates/post.js`)で`DiscussionEmbed`コンポーネントをインポートします。
 
 ```js:title=src/templates/post.js
 import React from "react"
@@ -65,7 +65,7 @@ import { graphql } from "gatsby"
 import { DiscussionEmbed } from "disqus-react"
 ```
 
-Then define your Disqus configuration object
+それから Disqus 構成オブジェクトを定義します。
 
 ```js
 const disqusConfig = {
@@ -89,4 +89,4 @@ return (
 
 And you're done. You should now see the Disqus comment form appear beneath your blog post [looking like this](https://janosh.io/blog/disqus-comments#disqus_thread). Happy blogging!
 
-[![Disqus comments](./images/disqus-comments.png)](https://janosh.io/blog/disqus-comments#disqus_thread)
+[![Disqus のコメント](./images/disqus-comments.png)](https://janosh.io/blog/disqus-comments#disqus_thread)
