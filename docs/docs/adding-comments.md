@@ -18,17 +18,17 @@ Tania Rascia が Gatsby ブログで書いたように[独自のコメントシ�
 
 ## コメントに Disqus を使用する
 
-このガイドでは、ブログに Disqus を実装する方法を学びます。Disqus には多くの優れた機能があります。
+このガイドでは、ブログに Disqus を実装する方法を学びます。Disqus には、次のような多くの優れた機能があります。
 
 - [コメントの管理とフォーラムの維持](https://help.disqus.com/moderation/moderating-101)に手間がかかりません。
 - 公式の[React サポート](https://github.com/disqus/disqus-react)を提供します。
 - [寛大な無料枠](https://disqus.com/pricing)を提供します。
 - [もっとも広く使用されているサービス](https://www.datanyze.com/market-share/comment-systems/disqus-market-share)のようです。
-- コメントが簡単です。 Disqus には大規模なユーザー基盤があり、新規ユーザーに慣れさせるのが非常に早いです。Google、Facebook、Twitter のアカウントを登録でき、これらのチャンネルを介して書いたコメントをシームレスに連携できます。
+- コメントが簡単です。 Disqus には大規模なユーザー基盤があり、新規ユーザーが慣れるまでがとても早いです。Google、Facebook、Twitter のアカウントを登録でき、これらのチャンネルを介して書いたコメントをシームレスに連携できます。
 - Disqus のユーザーインターフェースは多くのユーザーが認識できる落ち着いた見た目をしています。
 - すべての Disqus コンポーネントは遅延読み込みされるので、投稿の読み込み時間に悪影響を与えません。
 
-ただし、Disqus を選択することでトレードオフが発生することを留意しておいてください。もはや、完全な静的サイトではなくなり、埋め込まれた `iframe` を介して即座にコメントを配信するために、外部のプラットフォームに依存しています。さらに、第三者が訪問者のコメントを保存し、潜在的に閲覧行動を追跡することへのプライバシーの影響を考慮する必要があります。[Disqus のプライバシーポリシー](https://help.disqus.com/terms-and-policies/disqus-privacy-policy)、[プライバシーの FAQ](https://help.disqus.com/terms-and-policies/privacy-faq) (特に GDPR コンプライアンスに関する最後の質問）を参照して、ユーザーに[データの共有設定を編集する方法](https://help.disqus.com/terms-and-policies/how-to-edit-your-data-sharing-settings)を通知できます。
+ただし、Disqus を選択することでトレードオフが発生することも留意しておいてください。もはや、完全な静的サイトではなくなり、埋め込まれた `iframe` を介して即座にコメントを配信するために、外部のプラットフォームに依存しています。さらに、第三者が訪問者のコメントを保存し、潜在的に閲覧行動を追跡することへのプライバシーの影響を考慮する必要があります。[Disqus のプライバシーポリシー](https://help.disqus.com/terms-and-policies/disqus-privacy-policy)、[プライバシーの FAQ](https://help.disqus.com/terms-and-policies/privacy-faq) (特に GDPR コンプライアンスに関する最後の質問）を参照して、ユーザーに[データの共有設定を編集する方法](https://help.disqus.com/terms-and-policies/how-to-edit-your-data-sharing-settings)を通知してください。
 
 これらの懸念が Disqus の利点を上回る場合、上に記載した他の選択肢を調べてみてください。このガイドを他のサービスのセットアップ手順で拡張するためのプルリクエストを歓迎します。
 
@@ -38,7 +38,7 @@ Tania Rascia が Gatsby ブログで書いたように[独自のコメントシ�
 
 自身のブログに Disqus コメントを追加する手順は次の通りです。
 
-1. [Disqus にサインアップ](https://disqus.com/profile/signup)します。サインアップ処理の間にサイトの短縮名を選択する必要があります。これは Disqus がサイトからのコメントを識別するのに使われます。後ほどコピーします。
+1. [Disqus にサインアップ](https://disqus.com/profile/signup)します。サインアップ処理の間にサイトの短縮名を選択する必要があります。これは Disqus がサイトからのコメントを識別するのに使われます。後ほどコピーして使用します。
 2. Disqus の React パッケージをインストールします。
 
 ```shell
@@ -74,7 +74,7 @@ const disqusConfig = {
 }
 ```
 
-`identifier`は投稿を一意に識別する文字列か数値である必要があります。それは投稿のスラッグ、タイトル、または何らかの ID かも知れません。最後に、`DiscussionEmbed`コンポーネントを投稿テンプレートの JSX に追加します。
+`identifier`は投稿を一意に識別する文字列か数値（例えば、投稿のスラッグやタイトル、または何らかの ID）である必要があります。最後に、`DiscussionEmbed`コンポーネントを投稿テンプレートの JSX に追加します。
 
 ```jsx:title=src/templates/post.js
 return (
@@ -87,6 +87,6 @@ return (
 )
 ```
 
-これで完了です。ブログ投稿の下に Disqus のコメントが[このようにみえます](https://janosh.io/blog/disqus-comments#disqus_thread)。ハッピーブログ！
+これで完了です。ブログ投稿の下に Disqus のコメントが[このように](https://janosh.io/blog/disqus-comments#disqus_thread)。ハッピーブログ！
 
 [![Disqus のコメント](./images/disqus-comments.png)](https://janosh.io/blog/disqus-comments#disqus_thread)
