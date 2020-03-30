@@ -1,12 +1,12 @@
 ---
-title: Adding Page Transitions with gatsby-plugin-transition-link
+title: gatsby-plugin-transition-link によるページ遷移の追加
 ---
 
-This guide will cover how to use `gatsby-plugin-transition-link` to animate transitions between pages on your Gatsby site.
+このガイドでは、`gatsby-plugin-transition-link` を使用して、Gatsby サイトのページ遷移をアニメーション化する方法を説明します。
 
-## Overview
+## 概要
 
-The `TransitionLink` component provides a way of describing a page transition via props on a Link component. It works with many animation libraries, like [react-pose](https://popmotion.io/pose/), [gsap](https://greensock.com/), [animejs](https://animejs.com/), and many others.
+`TransitionLink` コンポーネントは、Link コンポーネントのプロパティを介して、ページ遷移を記述する方法を提供します。It works with many animation libraries, like [react-pose](https://popmotion.io/pose/), [gsap](https://greensock.com/), [animejs](https://animejs.com/), and many others.
 
 Note that currently, as the plugin is based on link navigation, transitions when navigating with the browser buttons are not supported.
 
