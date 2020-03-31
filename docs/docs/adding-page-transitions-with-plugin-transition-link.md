@@ -6,21 +6,21 @@ title: gatsby-plugin-transition-link によるページ遷移の追加
 
 ## 概要
 
-`TransitionLink` コンポーネントは、Link コンポーネントのプロパティを介して、ページ遷移を記述する方法を提供します。It works with many animation libraries, like [react-pose](https://popmotion.io/pose/), [gsap](https://greensock.com/), [animejs](https://animejs.com/), and many others.
+`TransitionLink` コンポーネントは、Link コンポーネントのプロパティを介して、ページ遷移を記述する方法を提供します。これは [react-pose](https://popmotion.io/pose/)、[gsap](https://greensock.com/), [animejs](https://animejs.com/) などの多くのアニメーションライブラリーで動作します。
 
-Note that currently, as the plugin is based on link navigation, transitions when navigating with the browser buttons are not supported.
+現在のところ、プラグインはリンクナビゲーションをベースにしているため、ブラウザボタンでの遷移はサポートされていません。
 
-For other page transition options, see the [overview on adding page animations](/docs/adding-page-transitions).
+その他のページ遷移オプションについては、[ページアニメーションの追加に関する概要](/docs/adding-page-transitions)をご覧ください。
 
-## Getting started
+## はじめに
 
-First, install the plugin:
+まず、プラグインをインストールします。
 
 ```shell
 npm install --save gatsby-plugin-transition-link
 ```
 
-Make sure to add the plugin to your `gatsby-config.js`:
+そして、`gatsby-config.js` にプラグインを追加してください。
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -30,7 +30,7 @@ module.exports = {
 ];
 ```
 
-Finally, import the `TransitionLink` component wherever you want to use it:
+最後に、`TransitionLink` を使用するコンポーネントにインポートします。
 
 ```javascript
 import TransitionLink from "gatsby-plugin-transition-link"
