@@ -6,7 +6,7 @@ title: gatsby-plugin-transition-link によるページ遷移の追加
 
 ## 概要
 
-`TransitionLink` コンポーネントは、Link コンポーネントのプロパティを介して、ページ遷移を記述する方法を提供します。これは [react-pose](https://popmotion.io/pose/)、[gsap](https://greensock.com/), [animejs](https://animejs.com/) などの多くのアニメーションライブラリーで動作します。
+`TransitionLink` コンポーネントは、Link コンポーネントのプロパティを介して、ページ遷移を記述する方法を提供します。これは [react-pose](https://popmotion.io/pose/)、[gsap](https://greensock.com/)、[animejs](https://animejs.com/) などの多くのアニメーションライブラリーで動作します。
 
 現在のところ、プラグインはリンクナビゲーションをベースにしているため、ブラウザボタンでの遷移はサポートされていません。
 
@@ -20,7 +20,7 @@ title: gatsby-plugin-transition-link によるページ遷移の追加
 npm install --save gatsby-plugin-transition-link
 ```
 
-そして、`gatsby-config.js` にプラグインを追加してください。
+そして、`gatsby-config.js` にプラグインを追加します。
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -36,23 +36,23 @@ module.exports = {
 import TransitionLink from "gatsby-plugin-transition-link"
 ```
 
-## Predefined transitions
+## 定義済みの遷移
 
-You can use the `AniLink` component to add page transitions without having to define your own custom transitions. It's a wrapper around `TransitionLink` that provides 4 predefined transitions: `fade`, `swipe`, `cover`, and `paintDrip`. You can preview them at [this demo site](https://gatsby-plugin-transition-link.netlify.com/).
+`AniLink` コンポーネントを使用することで、独自のカスタム遷移を定義することなく、ページ遷移を追加することができます。これは `TransitionLink` のラッパーで、`fade`、`swipe`、`cover`、`paintDrip`といった 4 つの予め定義された遷移を提供します。[こちらのデモサイト](https://gatsby-plugin-transition-link.netlify.com/)でプレビューできます。
 
-To use AniLink, you will need to install the `gsap` animation library:
+AniLink を利用するためには、 `gsap` アニメーションライブラリをインストールする必要があります。
 
 ```shell
 npm install --save gsap
 ```
 
-Then, import the AniLink component:
+次に、AniLink コンポーネントをインポートします。
 
 ```jsx
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 ```
 
-Finally, make sure you provide your desired animation's name as a blank prop to `AniLink`:
+最後に、利用したいアニメーション名を空のプロパティとして `AniLink` に指定してください。
 
 ```jsx
 <AniLink paintDrip to="page-4">
