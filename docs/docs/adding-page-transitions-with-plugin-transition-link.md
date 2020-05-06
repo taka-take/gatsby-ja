@@ -38,7 +38,7 @@ import TransitionLink from "gatsby-plugin-transition-link"
 
 ## 定義済みの遷移
 
-`AniLink` コンポーネントを使用することで、独自のカスタム遷移を定義することなく、ページ遷移を追加することができます。これは `TransitionLink` のラッパーで、`fade`、`swipe`、`cover`、`paintDrip`といった 4 つの予め定義された遷移を提供します。[こちらのデモサイト](https://gatsby-plugin-transition-link.netlify.com/)でプレビューできます。
+`AniLink` コンポーネントを使用することで、独自のカスタム遷移を定義することなく、ページ遷移を追加できます。これは `TransitionLink` のラッパーで、`fade`、`swipe`、`cover`、`paintDrip`といった 4 つのあらかじめ定義された遷移を提供します。[こちらのデモサイト](https://gatsby-plugin-transition-link.netlify.com/)でプレビューできます。
 
 AniLink を利用するためには、 `gsap` アニメーションライブラリをインストールする必要があります。
 
@@ -60,20 +60,21 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 </AniLink>
 ```
 
-Options like transition duration, direction, and more are customizable with props. See [the documentation of AniLink](https://transitionlink.tylerbarnes.ca/docs/anilink/) for more details.
+遷移に掛かる時間や遷移の方向などのオプションはプロパティによりカスタマイズできます。詳細は[AniLink のドキュメント](https://transitionlink.tylerbarnes.ca/docs/anilink/)をご覧ください。
 
-## Custom transitions
+## カスタム遷移
 
-You have two main methods of creating page transitions:
+ページ遷移を作成する方法は、次の 2 つがあります。
 
-1. Use the `trigger` function defined in your `exit`/`entry` prop. More details in the '[Using the `trigger` function](#using-the-trigger-function)' subsection.
-2. Use the props passed by `TransitionLink` to define your transitions. More details in the '[Using passed props](#using-passed-props)' subsection.
+1. `exit`/`entry` プロパティに定義された `trigger` 関数を使用します。詳細は '[`trigger` 関数を使う](#using-the-trigger-function)' のサブセクションをご覧ください。
 
-Additionally, you can specify a number of props and options on the `TransitionLink` component, like `length`, `delay`, and more. For more options and details, see [the documentation of TransitionLink](https://transitionlink.tylerbarnes.ca/docs/transitionlink/). For further examples of usage, visit the [plugin's GitHub repository.](https://github.com/TylerBarnes/gatsby-plugin-transition-link)
+2. `TransitionLink` から渡されたプロパティを使用して遷移を定義します。詳細は '[渡されたプロパティを使う](#using-passed-props)' のサブセクションをご覧ください。
 
-### Using the trigger function
+さらに、`TransitionLink` コンポーネントでは `length` や `delay` のような様々なプロパティやオプションを指定できます。オプションの詳細は [TransitionLink のドキュメント](https://transitionlink.tylerbarnes.ca/docs/transitionlink/)をご覧ください。その他の使用例は [プラグインの GitHub リポジトリー](https://github.com/TylerBarnes/gatsby-plugin-transition-link)をご覧ください。
 
-You can specify a `trigger` function that will handle the animation. This is useful for _imperative_ animation libraries like [animejs](https://animejs.com/) or [GSAP](https://greensock.com/gsap) that specify animations with function calls.
+### トリガー関数を使う
+
+アニメーションを処理する `trigger` 関数を指定できます。これは、[animejs](https://animejs.com/) や [GSAP](https://greensock.com/gsap)といった関数呼び出しでアニメーションを指定する _命令型_ アニメーションライブラリーに役立ちます。
 
 ```jsx
 <TransitionLink
@@ -95,9 +96,9 @@ You can specify a `trigger` function that will handle the animation. This is use
 </TransitionLink>
 ```
 
-### Using passed props
+### 渡されたプロパティを使う
 
-The exiting and entering pages/templates involved in the transition will receive props indicating the current transition status, as well as the `exit` or `enter` props defined on the `TransitionLink`.
+遷移に関する開始と終了のページ／テンプレートでは、現在の遷移状態を示すプロパティーと `TransitionLink` で定義された `enter` または `exit`プロパティーを受け取ります。
 
 ```jsx
 const PageOrTemplate = ({ children, transitionStatus, entry, exit }) => {
