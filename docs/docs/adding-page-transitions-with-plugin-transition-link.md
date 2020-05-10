@@ -107,11 +107,11 @@ const PageOrTemplate = ({ children, transitionStatus, entry, exit }) => {
 }
 ```
 
-You can combine these props with a _declarative_ state-based animation libraries like [react-pose](https://popmotion.io/pose/) or [react-spring](http://react-spring.surge.sh/) to specify transitions for exiting and entering a page.
+これらのプロパティを [react-pose](https://popmotion.io/pose/) や [react-spring](http://react-spring.surge.sh/) のような _宣言的_ ステートベースのアニメーションライブラリーと組み合わせることで、ページ遷移の開始や終了を指定できます。
 
-If you want to access these props in one of your components instead of a page/template, you should wrap your component in the `TransitionState` component. This component takes a function that will have access to the same props as above, which you can then use in your component.
+ページ／テンプレートの代わりに、コンポーネントでこれらのプロパティにアクセスする場合は、 `TransitionState` コンポーネントでコンポーネントをラップする必要があります。このコンポーネントは上記と同じプロパティにアクセスするための関数を受けとり、使用することができます。
 
-Here's an example using `TransitionState` and `react-pose` to trigger enter/exit transitions for a `Box` component.
+ここでは `TransitionState` と `react-pose` を使用して `Box` コンポーネントに遷移の開始／終了をトリガーする例を示します。
 
 ```jsx
 import { TransitionState } from "gatsby-plugin-transition-link"
