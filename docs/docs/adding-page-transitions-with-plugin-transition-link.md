@@ -66,7 +66,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 ページ遷移を作成する方法は、次の 2 つがあります。
 
-1. `exit`/`entry` プロパティに定義された `trigger` 関数を使用します。詳細は '[`trigger` 関数を使う](#using-the-trigger-function)' のサブセクションをご覧ください。
+1. `exit`/`entry` プロパティに定義された `trigger` 関数を使用します。詳細は「[`trigger` 関数を使う](#using-the-trigger-function)」のサブセクションをご覧ください。
 
 2. `TransitionLink` から渡されたプロパティを使用して遷移を定義します。詳細は「[渡されたプロパティを使う](#using-passed-props)」のサブセクションをご覧ください。
 
@@ -145,7 +145,7 @@ const Box = posed.div({
 
 ## ページ遷移から要素を除外する
 
-ページ遷移の全体を通して持続する要素（たとえば、サイト全体のヘッダー）が必要な場合もあります。これは、 `gatsby-config.js` で次のプラグインオプションを使用して、持続的なレイアウトコンポーネントの要素をラップすることで実現します。
+ページ遷移の全体を通して持続する要素（たとえば、サイト全体のヘッダー）が必要な場合もあります。これは、 `gatsby-config.js` で次のプラグインオプションを使用して、持続的なレイアウトコンポーネントの要素をラップすることで実現できます。
 
 ```javascript
 module.exports = {
