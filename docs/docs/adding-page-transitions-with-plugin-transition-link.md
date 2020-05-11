@@ -68,7 +68,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 1. `exit`/`entry` プロパティに定義された `trigger` 関数を使用します。詳細は '[`trigger` 関数を使う](#using-the-trigger-function)' のサブセクションをご覧ください。
 
-2. `TransitionLink` から渡されたプロパティを使用して遷移を定義します。詳細は '[渡されたプロパティを使う](#using-passed-props)' のサブセクションをご覧ください。
+2. `TransitionLink` から渡されたプロパティを使用して遷移を定義します。詳細は「[渡されたプロパティを使う](#using-passed-props)」のサブセクションをご覧ください。
 
 さらに、`TransitionLink` コンポーネントでは `length` や `delay` のような様々なプロパティやオプションを指定できます。オプションの詳細は [TransitionLink のドキュメント](https://transitionlink.tylerbarnes.ca/docs/transitionlink/)をご覧ください。その他の使用例は [プラグインの GitHub リポジトリー](https://github.com/TylerBarnes/gatsby-plugin-transition-link)をご覧ください。
 
@@ -141,11 +141,11 @@ const Box = posed.div({
 </TransitionState>
 ```
 
-Now, the `Box` component will be aware of whether the page it's a child of is mounting or unmounting, and it will fade in/out accordingly.
+これで、`Box` コンポーネントは、子ページのマウント／アンマウントに応じてフェードイン／フェードアウトします。
 
-## Excluding elements from page transitions
+## ページ遷移から要素を除外する
 
-You may want to have elements on a page that persist throughout the page transition (_ex. a site-wide header_). This can be accomplished by wrapping elements in a persistent layout component by using the following plugin option in your `gatsby-config.js`.
+ページ遷移の全体を通して持続する要素（たとえば、サイト全体のヘッダー）が必要な場合もあります。これは、 `gatsby-config.js` で次のプラグインオプションを使用して、持続的なレイアウトコンポーネントの要素をラップすることで実現します。
 
 ```javascript
 module.exports = {
@@ -160,12 +160,12 @@ module.exports = {
 ];
 ```
 
-As always, check out [the installation docs](https://transitionlink.tylerbarnes.ca/docs/transitionportal/) for more information.
+いつものように、詳細は[インストールのドキュメント](https://transitionlink.tylerbarnes.ca/docs/transitionportal/)をご覧ください。
 
-## Further reading
+## 参考文献
 
-- [Official documentation](https://transitionlink.tylerbarnes.ca/docs/)
-- [Source code for plugin](https://github.com/TylerBarnes/gatsby-plugin-transition-link)
-- [Demo site](https://gatsby-plugin-transition-link.netlify.com/)
-- [Blog post: 'Per-Link Gatsby page transitions with TransitionLink'](/blog/2018-12-04-per-link-gatsby-page-transitions-with-transitionlink/)
-- [Using transition-link with react-spring](https://github.com/TylerBarnes/gatsby-plugin-transition-link/issues/34)
+- [公式ドキュメント](https://transitionlink.tylerbarnes.ca/docs/)
+- [プラグインのソースコード](https://github.com/TylerBarnes/gatsby-plugin-transition-link)
+- [デモサイト](https://gatsby-plugin-transition-link.netlify.com/)
+- [ブログ記事: 「TransitionLink を用いたリンクごとの Gatsby のページ遷移」](/blog/2018-12-04-per-link-gatsby-page-transitions-with-transitionlink/)
+- [react-spring を用いた transition-link の使用](https://github.com/TylerBarnes/gatsby-plugin-transition-link/issues/34)
